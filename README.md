@@ -117,10 +117,13 @@ To reproduce the comparison plot in the Terrier paper, run:
 ```bash
 
 terrier-tools comparison-plot \
-    --csv $CSV  \
-    --output ${CSV/.csv/-comparison.png} \
+    --csv flatworms/Dicrocoelium_dendriticum/Dicrocoelium_dendriticum.csv  \
+    --csv flatworms/Fasciola_hepatica/Fasciola_hepatica.csv  \
+    --csv amphibians/Lithobates_catesbeianus/Lithobates_catesbeianus.csv  \
+    --csv amphibians/Glandirana_rugosa/Glandirana_rugosa.csv  \
+    --output comparison-big4.pdf \
     --threshold 0.9 \
-    --no-superfamily \
+    --no-superfamily
 ```
 
 
