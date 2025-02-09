@@ -112,6 +112,18 @@ for FASTA in $(find . -name '*.fa'); do
 done
 ```
 
+To reproduce the comparison plot in the Terrier paper, run:
+
+```bash
+
+terrier-tools comparison-plot \
+    --csv $CSV  \
+    --output ${CSV/.csv/-comparison.png} \
+    --threshold 0.9 \
+    --no-superfamily \
+```
+
+
 ## Credits
 
 Created by the Terrier team at the University of Melbourne.
