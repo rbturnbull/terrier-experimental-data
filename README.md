@@ -78,6 +78,13 @@ To recreate the comparison plots, run this bash loop:
 
 ```bash
 
+for CSV in $(find . -name '*.csv'); do
+    terrier-tools comparison-plot \
+        --csv $CSV  \
+        --output ${CSV/.csv/-comparison.png} \
+        --threshold 0.9 \
+        --no-superfamily \
+        --no-show
 done
 ```
 
@@ -94,3 +101,19 @@ for CSV in $(find . -name '*.csv'); do
 done
 ```
 
+To reproduce the Terrier CSV results, run the following bash loop:
+
+```bash
+for FASTA in $(find . -name '*.fa'); do
+    terrier \
+        --file $FASTA \
+        --output-csv ${FASTA/.fa/.csv} \
+        --threshold 0.0
+done
+```
+
+## Credits
+
+Created by the Terrier team at the University of Melbourne.
+
+If you use this dataset, cite the Terrier paper when it comes out.
