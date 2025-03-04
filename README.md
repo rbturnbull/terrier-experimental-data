@@ -13,6 +13,8 @@ There are 8 flatworms. See the following directories:
  - flatworms/Schistosoma_mansoni
  - flatworms/Trichobilharzia_regenti
 
+Schistosoma mansoni also has a FASTA file with 21 TEs annotated in the NCBI database.
+
 There are 51 amphibians:
 
  - amphibians/Allobates_femoralis
@@ -67,6 +69,8 @@ There are 51 amphibians:
  - amphibians/Xenopus_laevis
  - amphibians/Xenopus_tropicalis
 
+Most amphibian repeat libraries were generated using RepeatModeler version 2.0.4 (excluding the LTR pipeline extensions by Jullien M. Flynn). Ambistoma mexicanum was generated using RepeatModeler version 2.0.5.
+
 Each directory contains:
 
  - a FASTA file with extension .fa with the library of TE sequences.
@@ -74,10 +78,13 @@ Each directory contains:
  - a plot compairing the Terrier predictions with the original annotations (XXX-comparison.png)
  - a plot with the confusion matrix base on the original annotations (XXX-confusion.png)
 
+A summary CSV of the results is found in `summary.csv`.
+
+To reproduce the plot in the paper from the summary, run `plot-summary.py`. This script requires the same virtual environment as Terrier.
+
 To recreate the comparison plots, run this bash loop:
 
 ```bash
-
 for CSV in $(find . -name '*.csv'); do
     terrier-tools comparison-plot \
         --csv $CSV  \
