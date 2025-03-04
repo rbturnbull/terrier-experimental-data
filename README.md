@@ -133,6 +133,7 @@ terrier-tools comparison-plot \
     --no-superfamily
 ```
 
+The timings for the Terrier runs are found in `timings.csv`. To reproduce the plot of the timings, run `plot-timings.py`.
 
 ## Credits
 
