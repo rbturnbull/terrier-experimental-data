@@ -2,7 +2,7 @@
 
 This repository contains the data for the application of Terrier to experimental data.
 
-There are 8 flatworms. See the following directories:
+There are 8 libraries of transposable elements (TEs) from flatworms. See the following directories:
 
  - flatworms/Clonorchis_sinensis
  - flatworms/Dicrocoelium_dendriticum
@@ -15,7 +15,7 @@ There are 8 flatworms. See the following directories:
 
 Schistosoma mansoni also has a FASTA file with 21 TEs annotated in the NCBI database.
 
-There are 51 amphibians:
+There are 51 libraries of TEs from amphibians:
 
  - amphibians/Allobates_femoralis
  - amphibians/Ambystoma_mexicanum
@@ -75,8 +75,8 @@ Each directory contains:
 
  - a FASTA file with extension .fa with the library of TE sequences.
  - a CSV file with the predictions from Terrier
- - a plot compairing the Terrier predictions with the original annotations (XXX-comparison.png)
- - a plot with the confusion matrix base on the original annotations (XXX-confusion.png)
+ - a plot compairing the Terrier predictions with the original annotations (XXXXXXX-comparison.png)
+ - a plot with the confusion matrix base on the original annotations (XXXXXXX-confusion.png)
 
 A summary CSV of the results is found in `summary.csv`.
 
@@ -119,7 +119,7 @@ for FASTA in $(find . -name '*.fa'); do
 done
 ```
 
-To reproduce the comparison plot in the Terrier paper, run:
+To comparison plot of the two flatworms and the two amphibians with the most transposable elements, run:
 
 ```bash
 
