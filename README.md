@@ -75,7 +75,7 @@ Each directory contains:
 
  - a FASTA file with extension .fa with the library of TE sequences.
  - a CSV file with the predictions from Terrier
- - a plot compairing the Terrier predictions with the original annotations (XXXXXXX-comparison.png)
+ - a plot comparing the Terrier predictions with the original annotations (XXXXXXX-comparison.png)
  - a plot with the confusion matrix base on the original annotations (XXXXXXX-confusion.png)
 
 A summary CSV of the results is found in `summary.csv`.
