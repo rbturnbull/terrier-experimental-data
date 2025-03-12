@@ -80,15 +80,17 @@ fig.update_layout(width=1200, height=600)
 fig.update_layout(margin=dict(l=0, r=0, t=20, b=20))
 
 # put legend in top left corner of plot
-fig.update_layout(legend=dict(
-    x=0.01,
-    y=0.98,
-    xanchor='left',
-    yanchor='top',
-    xref='paper',
-    yref='paper',
-    orientation='v',
-))
+fig.update_layout(
+    legend=dict(
+        x=0.01,
+        y=0.98,
+        xanchor='left',
+        yanchor='top',
+        xref='paper',
+        yref='paper',
+        orientation='v',
+    ),
+)
 
 fig.show()
 fig.write_image("terrier-experimental-data-timings.pdf")

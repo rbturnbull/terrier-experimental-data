@@ -32,9 +32,10 @@ for category in categories:
     color = colors[category]
     amphibians = df[df["Organism Type"] == "Amphibian"]
     flatworms = df[df["Organism Type"] == "Flatworm"]
+    flatworms_species_names = [f"<i>{species}</i>" for species in flatworms["Species"]]
     fig.add_trace(
         go.Bar(
-            y=flatworms["Species"],
+            y=flatworms_species_names,
             x=flatworms[f"Terrier {category}"],
             name=category,
             marker_color=color,
@@ -46,7 +47,7 @@ for category in categories:
     )
     fig.add_trace(
         go.Bar(
-            y=flatworms["Species"],
+            y=flatworms_species_names,
             x=flatworms[f"RepeatModeler {category}"],
             name=category,
             marker_color=color,
@@ -56,9 +57,10 @@ for category in categories:
         row=1,
         col=1,
     )
+    species_names = [f"<i>{species}</i>" for species in amphibians["Species"]]
     fig.add_trace(
         go.Bar(
-            y=amphibians["Species"],
+            y=species_names,
             x=amphibians[f"Terrier {category}"],
             name=category,
             marker_color=color,
@@ -70,7 +72,7 @@ for category in categories:
     )
     fig.add_trace(
         go.Bar(
-            y=amphibians["Species"],
+            y=species_names,
             x=amphibians[f"RepeatModeler {category}"],
             name=category,
             marker_color=color,
@@ -97,15 +99,18 @@ fig.update_layout(
 fig.update_layout(margin=dict(l=0, r=0, t=20, b=10))
 
 # put legend inside the plot
-fig.update_layout(legend=dict(
-    # orientation="h",
-    yanchor="top",
-    y=0.995,
-    xanchor="right",
-    # change order
-    traceorder="normal",
-    x=0.99,
-))
+fig.update_layout(
+    legend=dict(
+        # orientation="h",
+        yanchor="top",
+        y=0.995,
+        xanchor="right",
+        # change order
+        traceorder="normal",
+        x=0.99,
+    ),
+)
+
 
 fig.show()
 fig.write_image("terrier-experimental-data-summary.pdf")
