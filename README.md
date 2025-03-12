@@ -1,6 +1,6 @@
 # Terrier Experimental Data
 
-This repository contains the data for the application of Terrier to experimental data.
+This repository contains the data for the application of [Terrier](https://github.com/rbturnbull/terrier) to experimental data.
 
 There are 8 libraries of transposable elements (TEs) from flatworms. See the following directories:
 
@@ -137,6 +137,12 @@ The timings for the Terrier runs are found in `timings.csv`. To reproduce the pl
 
 ## Credits
 
-Created by the Terrier team at the University of Melbourne.
+Terrier was developed by:
 
-If you use this dataset, cite the Terrier paper when it comes out.
+- [Robert Turnbull](https://robturnbull.com)
+- [Neil D. Young](https://findanexpert.unimelb.edu.au/profile/249669-neil-young)
+- [Edoardo Tescari](https://findanexpert.unimelb.edu.au/profile/428364-edoardo-tescari)
+- [Lee F. Skerratt](https://findanexpert.unimelb.edu.au/profile/451921-lee-skerratt)
+- [Tiffany A. Kosch](https://findanexpert.unimelb.edu.au/profile/775927-tiffany-kosch)
+
+If you use this dataset, cite the Terrier paper. See more information at: https://github.com/rbturnbull/terrier
