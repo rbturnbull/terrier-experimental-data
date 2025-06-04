@@ -20,7 +20,7 @@ marker_symbols = {
     "Terrier" : "star-triangle-up",
 }
 
-fig = make_subplots(rows=1, cols=2, shared_yaxes=True, horizontal_spacing=0.01, subplot_titles=('a. CPU Timings', 'b. GPU Timings'))
+fig = make_subplots(rows=1, cols=2, shared_yaxes=False, horizontal_spacing=0.04, subplot_titles=('a. CPU Timings', 'b. GPU Timings'))
 
 df = pd.read_csv('timings.csv')
 
